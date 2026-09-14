@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ quiz_title }}</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>{{ quiz_title }} 🧠</h1>
+
+        <div class="quiz-card">
+
+            <h2>
+                ⏱️ Time Left:
+                <span id="timer">60</span> seconds
+            </h2>
+
+            {% if quiz_type == "default" %}
+
+                <form
+                    id="quizForm"
+                    action="{{ url_for('default_result', category=quiz_id) }}"
+                    method="POST"
+                >
+
+            {% else %}
+
+                <form
+                    id="quizForm"
+                    action="{{ url_for('custom_result', quiz_id=quiz_id) }}"
+                    method="POST"
+                >
+
+            {% endif %}
+
+                {% for question in questions %}
+
+                    {% set question_index = loop.index0 %}
+
+                    <h3>
+                        {{ loop.index }}. {{ question.question }}
+                    </h3>
+
+                    {% if quiz_type == "custom" %}
+
+                        <label class="option">
+                            <input
+                                type="radio"
+                                name="question_{{ question_index }}"
+                                value="A"
+                                required
+                            >
+                            {{ question.options[0] }}
+                        </label>
+
+                        <label class="option">
+                            <input
+                                type="radio"
+                                name="question_{{ question_index }}"
+                                value="B"
+                                required
+                            >
+                            {{ question.options[1] }}
+                        </label>
+
+                        <label class="option">
+                            <input
+                                type="radio"
+                                name="question_{{ question_index }}"
+                                value="C"
+                                required
+                            >
+                            {{ question.options[2] }}
+                        </label>
+
+                        <label class="option">
+                            <input
+                                type="radio"
+                                name="question_{{ question_index }}"
+                                value="D"
+                                required
+                            >
+                            {{ question.options[3] }}
+                        </label>
+
+                    {% else %}
+
+                        {% for option in question.options %}
+
+                            <label class="option">
+                                <input
+                                    type="radio"
+                                    name="question_{{ question_index }}"
+                                    value="{{ option }}"
+                                    required
+                                >
+                                {{ option }}
+                            </label>
+
+                        {% endfor %}
+
+                    {% endif %}
+
+                    <hr>
+
+                {% endfor %}
+
+                <button type="submit">
+                    Submit Quiz
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

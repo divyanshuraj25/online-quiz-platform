@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Online Quiz Platform</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🧠 Online Quiz Platform</h1>
+
+        <p class="subtitle">
+            Test your knowledge, improve your skills, and create your own quiz!
+        </p>
+
+        <h2>Choose Your Challenge</h2>
+
+        <a
+            href="{{ url_for('create_quiz') }}"
+            class="create-button"
+        >
+            ➕ Create Your Own Quiz
+        </a>
+
+        <div class="category-grid">
+
+            {% for category in categories %}
+
+                <div class="category-card">
+
+                    {% if category == "Python" %}
+                        <div class="category-icon">🐍</div>
+                    {% elif category == "General Knowledge" %}
+                        <div class="category-icon">🌍</div>
+                    {% elif category == "Science" %}
+                        <div class="category-icon">🔬</div>
+                    {% elif category == "AI and Machine Learning" %}
+                        <div class="category-icon">🤖</div>
+                    {% else %}
+                        <div class="category-icon">📚</div>
+                    {% endif %}
+
+                    <h3>{{ category }}</h3>
+
+                    {% if category == "Python" %}
+                        <p>Test your Python programming knowledge.</p>
+                    {% elif category == "General Knowledge" %}
+                        <p>Challenge yourself with interesting GK questions.</p>
+                    {% elif category == "Science" %}
+                        <p>Explore questions related to science and discoveries.</p>
+                    {% elif category == "AI and Machine Learning" %}
+                        <p>Check your knowledge of Artificial Intelligence and ML.</p>
+                    {% else %}
+                        <p>Improve your knowledge with this quiz.</p>
+                    {% endif %}
+
+                    <a
+                        href="{{ url_for('quiz', category=category) }}"
+                        class="quiz-button"
+                    >
+                        Start {{ category }} Quiz
+                    </a>
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+        <h2 class="custom-heading">
+            🎯 User Created Quizzes
+        </h2>
+
+        {% if custom_quizzes %}
+
+            <div class="category-grid">
+
+                {% for quiz in custom_quizzes %}
+
+                    <div class="category-card custom-card">
+
+                        <div class="category-icon">📝</div>
+
+                        <h3>{{ quiz.title }}</h3>
+
+                        <p>
+                            Category: {{ quiz.category }}
+                        </p>
+
+                        <a
+                            href="{{ url_for('custom_quiz', quiz_id=quiz.id) }}"
+                            class="quiz-button"
+                        >
+                            Start Custom Quiz
+                        </a>
+
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+        {% else %}
+
+            <div class="empty-message">
+                <p>No custom quizzes available yet.</p>
+
+                <p>
+                    Click on
+                    <strong>Create Your Own Quiz</strong>
+                    to create your first quiz.
+                </p>
+            </div>
+
+        {% endif %}
+
+    </div>
+
+</body>
+</html>

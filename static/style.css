@@ -1,0 +1,683 @@
+/* =========================
+   Google Font
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/* =========================
+   Global Reset
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 30px 15px;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+
+    background:
+        radial-gradient(circle at top left, #263b80, transparent 35%),
+        radial-gradient(circle at bottom right, #6a1b9a, transparent 35%),
+        linear-gradient(135deg, #080b1f, #111936 50%, #1a1035);
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-size: 42px;
+    font-weight: 800;
+    text-shadow: 0 0 20px rgba(126, 87, 255, 0.6);
+}
+
+h2 {
+    margin-bottom: 30px;
+    color: #d9ddff;
+    font-size: 25px;
+}
+
+h3 {
+    color: #ffffff;
+    font-size: 19px;
+    line-height: 1.6;
+}
+
+p {
+    line-height: 1.7;
+}
+
+.subtitle {
+    margin-bottom: 25px;
+    color: #c8cdf5;
+    font-size: 16px;
+}
+
+
+/* =========================
+   Common Links and Buttons
+========================= */
+
+a {
+    text-decoration: none;
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    padding: 15px;
+
+    border: none;
+    border-radius: 30px;
+
+    color: #ffffff;
+    background: linear-gradient(135deg, #6c63ff, #a855f7);
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(108, 99, 255, 0.35);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(168, 85, 247, 0.5);
+}
+
+
+/* =========================
+   Home Page
+========================= */
+
+.category-card {
+    display: inline-block;
+    width: 45%;
+    min-height: 230px;
+    margin: 15px;
+    padding: 30px 25px;
+
+    vertical-align: top;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, 0.09);
+    backdrop-filter: blur(15px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 45px rgba(111, 76, 255, 0.35);
+}
+
+.category-card h3 {
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-size: 25px;
+}
+
+.category-card p {
+    min-height: 60px;
+    margin-bottom: 25px;
+    color: #c8cdf5;
+    font-size: 15px;
+}
+
+.category-card a,
+.result-actions a {
+    display: inline-block;
+    padding: 13px 24px;
+
+    border-radius: 30px;
+    color: #ffffff;
+
+    background: linear-gradient(135deg, #6c63ff, #a855f7);
+
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(108, 99, 255, 0.35);
+    transition: all 0.3s ease;
+}
+
+.category-card a:hover,
+.result-actions a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(168, 85, 247, 0.5);
+}
+
+.create-button {
+    display: inline-block;
+    margin: 10px 0 35px;
+    padding: 15px 28px;
+
+    border-radius: 30px;
+    color: #ffffff;
+
+    background: linear-gradient(135deg, #00b09b, #96c93d);
+
+    font-weight: 700;
+    box-shadow: 0 10px 25px rgba(0, 176, 155, 0.3);
+    transition: all 0.3s ease;
+}
+
+.create-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(0, 176, 155, 0.45);
+}
+
+.custom-card {
+    border: 1px solid rgba(150, 201, 61, 0.5);
+}
+
+.empty-message {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 25px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 18px;
+
+    color: #d7dcff;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================
+   Quiz Page
+========================= */
+
+.quiz-card {
+    width: 100%;
+    max-width: 850px;
+    margin: 25px auto;
+    padding: 35px;
+
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.09);
+    backdrop-filter: blur(15px);
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.quiz-card h2 {
+    padding: 15px;
+
+    text-align: center;
+    border-radius: 15px;
+
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.25);
+
+    font-size: 23px;
+}
+
+#timer {
+    color: #ffcf5c;
+    font-weight: 800;
+}
+
+.quiz-card h3 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.option {
+    display: block;
+    margin: 12px 0;
+    padding: 15px 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 14px;
+
+    color: #e9ebff;
+    background: rgba(255, 255, 255, 0.07);
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.option:hover {
+    transform: translateX(5px);
+    border-color: #8b7dff;
+    background: rgba(108, 99, 255, 0.25);
+}
+
+.option input {
+    margin-right: 10px;
+    accent-color: #8b5cf6;
+    cursor: pointer;
+}
+
+.quiz-card hr {
+    height: 1px;
+    margin: 25px 0;
+
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+/* =========================
+   Create Quiz Page
+========================= */
+
+.create-quiz-form {
+    width: 100%;
+    max-width: 850px;
+    margin: 25px auto;
+
+    text-align: left;
+}
+
+.form-section,
+.question-form-card {
+    margin-bottom: 25px;
+    padding: 25px;
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, 0.09);
+    backdrop-filter: blur(15px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.question-form-card h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.create-quiz-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 8px;
+
+    color: #e2e6ff;
+    font-weight: 600;
+}
+
+.create-quiz-form input,
+.create-quiz-form select {
+    width: 100%;
+    padding: 14px 16px;
+
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+
+    color: #ffffff;
+    background: rgba(15, 20, 50, 0.8);
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.create-quiz-form input::placeholder {
+    color: #aeb5df;
+}
+
+.create-quiz-form input:focus,
+.create-quiz-form select:focus {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 12px rgba(139, 92, 246, 0.35);
+}
+
+.create-quiz-form select option {
+    color: #111111;
+    background: #ffffff;
+}
+
+.back-button {
+    display: inline-block;
+    margin-bottom: 30px;
+    padding: 12px 25px;
+
+    border-radius: 30px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #6c63ff, #a855f7);
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   Result Page
+========================= */
+
+.result-card {
+    width: 100%;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 45px 30px;
+
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(18px);
+
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+
+    animation: slideUp 0.8s ease;
+}
+
+.result-icon {
+    margin-bottom: 15px;
+    font-size: 70px;
+    animation: bounce 1.5s infinite;
+}
+
+.result-card h1 {
+    margin-bottom: 10px;
+    font-size: 38px;
+}
+
+.result-card h2 {
+    margin-bottom: 30px;
+    color: #cdd3ff;
+    font-size: 22px;
+}
+
+
+/* =========================
+   Score Circle
+========================= */
+
+.score-circle {
+    --score: 0%;
+
+    position: relative;
+    display: flex;
+    width: 210px;
+    height: 210px;
+    margin: 25px auto 35px;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        conic-gradient(
+            #8b5cf6 var(--score),
+            rgba(255, 255, 255, 0.15) var(--score)
+        );
+
+    box-shadow: 0 0 35px rgba(139, 92, 246, 0.4);
+}
+
+.score-circle::before {
+    content: "";
+
+    position: absolute;
+    width: 165px;
+    height: 165px;
+
+    border-radius: 50%;
+    background: #171b3c;
+}
+
+.score-content {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.score-content strong {
+    color: #ffffff;
+    font-size: 42px;
+    font-weight: 800;
+}
+
+.score-content span {
+    color: #bfc5f7;
+    font-size: 15px;
+}
+
+
+/* =========================
+   Result Details
+========================= */
+
+.result-details {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.result-box {
+    flex: 1;
+    padding: 22px 15px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.result-box span {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 30px;
+}
+
+.result-box p {
+    margin-bottom: 8px;
+    color: #c8cdf5;
+    font-size: 14px;
+}
+
+.result-box strong {
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.correct-box {
+    box-shadow: inset 0 0 20px rgba(34, 197, 94, 0.08);
+}
+
+.total-box {
+    box-shadow: inset 0 0 20px rgba(59, 130, 246, 0.08);
+}
+
+
+/* =========================
+   Performance Message
+========================= */
+
+.performance {
+    margin: 25px 0;
+    padding: 20px;
+
+    border-radius: 18px;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.performance p {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.excellent {
+    border: 1px solid rgba(34, 197, 94, 0.5);
+    color: #86efac;
+    background: rgba(34, 197, 94, 0.15);
+}
+
+.good {
+    border: 1px solid rgba(59, 130, 246, 0.5);
+    color: #93c5fd;
+    background: rgba(59, 130, 246, 0.15);
+}
+
+.improve {
+    border: 1px solid rgba(249, 115, 22, 0.5);
+    color: #fdba74;
+    background: rgba(249, 115, 22, 0.15);
+}
+
+
+/* =========================
+   Result Actions
+========================= */
+
+.result-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.result-actions a {
+    min-width: 180px;
+}
+
+
+/* =========================
+   Animations
+========================= */
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 20px 10px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    .category-card {
+        display: block;
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .create-button {
+        width: 100%;
+    }
+
+    .quiz-card {
+        padding: 22px 16px;
+    }
+
+    .quiz-card h2 {
+        font-size: 18px;
+    }
+
+    .form-section,
+    .question-form-card {
+        padding: 18px;
+    }
+
+    .result-card {
+        padding: 35px 18px;
+    }
+
+    .result-card h1 {
+        font-size: 30px;
+    }
+
+    .result-details {
+        gap: 10px;
+    }
+
+    .result-box {
+        padding: 18px 8px;
+    }
+
+    .result-box p {
+        font-size: 12px;
+    }
+
+    .result-box strong {
+        font-size: 25px;
+    }
+
+    .score-circle {
+        width: 180px;
+        height: 180px;
+    }
+
+    .score-circle::before {
+        width: 140px;
+        height: 140px;
+    }
+
+    .score-content strong {
+        font-size: 35px;
+    }
+
+    .result-actions {
+        flex-direction: column;
+    }
+
+    .result-actions a {
+        width: 100%;
+    }
+}

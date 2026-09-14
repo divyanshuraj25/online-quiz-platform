@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz Result - {{ category }}</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="result-card">
+
+            <div class="result-icon">🎉</div>
+
+            <h1>Quiz Completed!</h1>
+
+            <h2>{{ category }}</h2>
+
+            <div
+                class="score-circle"
+                style="--score: {{ percentage }}%;"
+            >
+                <div class="score-content">
+                    <strong>{{ "%.0f"|format(percentage) }}%</strong>
+                    <span>Score</span>
+                </div>
+            </div>
+
+            <div class="result-details">
+
+                <div class="result-box correct-box">
+                    <span>✅</span>
+                    <p>Correct Answers</p>
+                    <strong>{{ score }}</strong>
+                </div>
+
+                <div class="result-box total-box">
+                    <span>📋</span>
+                    <p>Total Questions</p>
+                    <strong>{{ total }}</strong>
+                </div>
+
+            </div>
+
+            {% if percentage >= 80 %}
+
+                <div class="performance excellent">
+                    🏆 Excellent Performance!
+                    <p>Keep up the amazing work!</p>
+                </div>
+
+            {% elif percentage >= 50 %}
+
+                <div class="performance good">
+                    👍 Good Job!
+                    <p>You are doing great. Keep practicing!</p>
+                </div>
+
+            {% else %}
+
+                <div class="performance improve">
+                    💪 Keep Practicing!
+                    <p>Practice more and improve your score.</p>
+                </div>
+
+            {% endif %}
+
+            <div class="result-actions">
+
+                {% if quiz_type == "default" %}
+
+                    <a href="{{ url_for('quiz', category=quiz_id) }}">
+                        🔄 Try Again
+                    </a>
+
+                {% else %}
+
+                    <a href="{{ url_for('custom_quiz', quiz_id=quiz_id) }}">
+                        🔄 Try Again
+                    </a>
+
+                {% endif %}
+
+                <a href="{{ url_for('home') }}">
+                    🏠 Back to Home
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

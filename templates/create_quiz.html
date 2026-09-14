@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Your Quiz</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>➕ Create Your Own Quiz</h1>
+
+        <p class="subtitle">
+            Create a quiz with 5 multiple-choice questions.
+        </p>
+
+        <form
+            class="create-quiz-form"
+            action="{{ url_for('save_quiz') }}"
+            method="POST"
+        >
+
+            <div class="form-section">
+
+                <label for="title">Quiz Title</label>
+
+                <input
+                    type="text"
+                    id="title"
+                    name="title"
+                    placeholder="Example: Python Beginner Quiz"
+                    required
+                >
+
+                <label for="category">Quiz Category</label>
+
+                <input
+                    type="text"
+                    id="category"
+                    name="category"
+                    placeholder="Example: Programming"
+                    required
+                >
+
+            </div>
+
+
+            {% for number in range(1, 6) %}
+
+                <div class="question-form-card">
+
+                    <h2>Question {{ number }}</h2>
+
+                    <label>
+                        Question
+                    </label>
+
+                    <input
+                        type="text"
+                        name="question_{{ number }}"
+                        placeholder="Enter your question"
+                        required
+                    >
+
+                    <label>
+                        Option A
+                    </label>
+
+                    <input
+                        type="text"
+                        name="option_a_{{ number }}"
+                        placeholder="Enter option A"
+                        required
+                    >
+
+                    <label>
+                        Option B
+                    </label>
+
+                    <input
+                        type="text"
+                        name="option_b_{{ number }}"
+                        placeholder="Enter option B"
+                        required
+                    >
+
+                    <label>
+                        Option C
+                    </label>
+
+                    <input
+                        type="text"
+                        name="option_c_{{ number }}"
+                        placeholder="Enter option C"
+                        required
+                    >
+
+                    <label>
+                        Option D
+                    </label>
+
+                    <input
+                        type="text"
+                        name="option_d_{{ number }}"
+                        placeholder="Enter option D"
+                        required
+                    >
+
+                    <label>
+                        Correct Option
+                    </label>
+
+                    <select
+                        name="correct_option_{{ number }}"
+                        required
+                    >
+                        <option value="">Select correct option</option>
+                        <option value="A">Option A</option>
+                        <option value="B">Option B</option>
+                        <option value="C">Option C</option>
+                        <option value="D">Option D</option>
+                    </select>
+
+                </div>
+
+            {% endfor %}
+
+            <button type="submit">
+                💾 Save Quiz
+            </button>
+
+        </form>
+
+        <br>
+
+        <a class="back-button" href="{{ url_for('home') }}">
+            🏠 Back to Home
+        </a>
+
+    </div>
+
+</body>
+</html>

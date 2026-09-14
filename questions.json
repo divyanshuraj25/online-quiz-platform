@@ -1,0 +1,126 @@
+
+{
+  "Python": [
+    {
+      "question": "What is the correct file extension for Python?",
+      "options": [".html", ".py", ".css", ".js"],
+      "answer": ".py"
+    },
+    {
+      "question": "Which keyword is used to define a function in Python?",
+      "options": ["function", "define", "def", "fun"],
+      "answer": "def"
+    },
+    {
+      "question": "Which data type is used to store True or False?",
+      "options": ["int", "str", "bool", "list"],
+      "answer": "bool"
+    },
+    {
+      "question": "Which symbol is used for comments in Python?",
+      "options": ["//", "#", "/* */", "<!-- -->"],
+      "answer": "#"
+    },
+    {
+      "question": "Which function is used to display output in Python?",
+      "options": ["echo()", "display()", "print()", "show()"],
+      "answer": "print()"
+    }
+  ],
+  "General Knowledge": [
+    {
+      "question": "What is the capital of India?",
+      "options": ["Mumbai", "New Delhi", "Kolkata", "Chennai"],
+      "answer": "New Delhi"
+    },
+    {
+      "question": "How many days are there in a leap year?",
+      "options": ["365", "366", "364", "360"],
+      "answer": "366"
+    },
+    {
+      "question": "Which is the largest ocean in the world?",
+      "options": ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Arctic Ocean"],
+      "answer": "Pacific Ocean"
+    },
+    {
+      "question": "Who is known as the Father of the Nation in India?",
+      "options": ["Jawaharlal Nehru", "Mahatma Gandhi", "Sardar Patel", "Subhash Chandra Bose"],
+      "answer": "Mahatma Gandhi"
+    },
+    {
+      "question": "Which planet is known as the Red Planet?",
+      "options": ["Earth", "Mars", "Jupiter", "Venus"],
+      "answer": "Mars"
+    }
+  ],
+  "Science": [
+    {
+      "question": "What is the chemical formula of water?",
+      "options": ["CO2", "O2", "H2O", "NaCl"],
+      "answer": "H2O"
+    },
+    {
+      "question": "Which gas do humans need for breathing?",
+      "options": ["Nitrogen", "Oxygen", "Carbon Dioxide", "Hydrogen"],
+      "answer": "Oxygen"
+    },
+    {
+      "question": "What is the center of an atom called?",
+      "options": ["Electron", "Proton", "Nucleus", "Neutron"],
+      "answer": "Nucleus"
+    },
+    {
+      "question": "What force pulls objects toward Earth?",
+      "options": ["Friction", "Magnetism", "Gravity", "Electricity"],
+      "answer": "Gravity"
+    },
+    {
+      "question": "Which organ pumps blood throughout the human body?",
+      "options": ["Brain", "Lungs", "Heart", "Kidney"],
+      "answer": "Heart"
+    }
+  ],
+  "AI and Machine Learning": [
+    {
+      "question": "What does AI stand for?",
+      "options": [
+        "Automated Internet",
+        "Artificial Intelligence",
+        "Advanced Information",
+        "Automatic Input"
+      ],
+      "answer": "Artificial Intelligence"
+    },
+    {
+      "question": "What does ML stand for?",
+      "options": [
+        "Machine Learning",
+        "Modern Language",
+        "Manual Logic",
+        "Machine Language"
+      ],
+      "answer": "Machine Learning"
+    },
+    {
+      "question": "Which language is commonly used in AI and ML?",
+      "options": ["HTML", "CSS", "Python", "SQL"],
+      "answer": "Python"
+    },
+    {
+      "question": "What is a dataset?",
+      "options": [
+        "A collection of data",
+        "A computer screen",
+        "A programming language",
+        "A web browser"
+      ],
+      "answer": "A collection of data"
+    },
+    {
+      "question": "What is the process of teaching a machine learning model using data called?",
+      "options": ["Training", "Browsing", "Formatting", "Downloading"],
+      "answer": "Training"
+    }
+  ]
+}
